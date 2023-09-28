@@ -1,0 +1,22 @@
+ALGORITHM checkpointalgo
+VAR
+   nb_char: INTEGER:=0
+   nb_voy:INTEGER:=0
+   nb_word:INTEGER:=0
+   C:CHAR:=""
+BEGIN
+    WHILE (C<>".") DO
+        read (C)
+        nb_char=nb_char+1
+       
+        IF (C in [a,e,o,i,u]) THEN
+            nb_voy=nb_voy+1
+           END_IF
+        IF (C=" ") THEN
+            nb_word=nb_word+1
+        END_IF
+    END_WHILE
+    write (nb_char-1)
+    write (nb_voy)
+    write (nb_word)
+END
